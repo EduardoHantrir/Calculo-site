@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/201/201558.png" type="image/png">
+    <title>Aprenda Cálculo</title>
+
+    <!-- Bootstrap local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- Fonte Roboto do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- MathJax para fórmulas -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="bi bi-calculator me-2"></i>Aprenda Cálculo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#teoria">Teoria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formulas">Fórmulas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#exercicios">Exercícios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recursos">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="display-3 fw-bold mb-4">Domine o Cálculo com Clareza</h1>
+                <p class="lead fs-4 mb-4">
+                    Aprenda Cálculo Diferencial e Integral com teoria completa, fórmulas organizadas e exercícios
+                    práticos
+                </p>
+                <div class="d-flex justify-content-center gap-3 mb-4">
+                    <a href="#teoria" class="btn btn-light btn-lg btn-custom">
+                        <i class="bi bi-book me-2"></i>Começar Agora
+                    </a>
+                    <a href="#exercicios" class="btn btn-outline-light btn-lg btn-custom">
+                        <i class="bi bi-puzzle me-2"></i>Exercícios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Teoria -->
+    <section id="teoria" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Teoria Fundamental</h2>
+            <p class="section-subtitle">Domine os conceitos essenciais do Cálculo</p>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card-custom">
+                        <div class="card-icon primary text-white">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Funções e Limites</h4>
+                        <p><strong>Função:</strong> Relação que associa cada elemento do domínio a um único elemento do
+                            contradomínio.</p>
+                        <p><strong>Limite:</strong> Valor que uma função tende a assumir quando a variável se aproxima
+                            de um ponto.</p>
+                        <div class="mt-3">
+                            <p><strong>Exemplo:</strong> $\lim_{x \to 2} (3x + 1) = 7$</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card-custom">
+                        <div class="card-icon secondary text-white">
+                            <i class="bi bi-bezier2"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Continuidade</h4>
+                        <p>Uma função é <strong>contínua</strong> em um ponto quando não há interrupções.</p>
+                        <p><strong>Condições:</strong></p>
+                        <ul class="list-unstyled">
+                            <li>• $f(a)$ está definida</li>
+                            <li>• $\lim_{x \to a} f(x)$ existe</li>
+                            <li>• $\lim_{x \to a} f(x) = f(a)$</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card-custom">
+                        <div class="card-icon accent text-white">
+                            <i class="bi bi-activity"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Derivadas</h4>
+                        <p>A <strong>derivada</strong> mede a taxa de variação instantânea de uma função.</p>
+                        <p><strong>Interpretação geométrica:</strong> Inclinação da reta tangente.</p>
+                        <div class="mt-3">
+                            <p><strong>Exemplo:</strong> Se $f(x) = x^2$, então $f'(x) = 2x$</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card-custom">
+                        <div class="card-icon warning text-white">
+                            <i class="bi bi-bar-chart"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Integrais</h4>
+                        <p>A <strong>integral</strong> representa a área sob uma curva ou a operação inversa da
+                            derivação.</p>
+                        <p><strong>Teorema Fundamental:</strong> Relaciona derivação e integração.</p>
+                        <div class="mt-3">
+                            <p><strong>Exemplo:</strong> $\int x^2 dx = \frac{x^3}{3} + C$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Fórmulas -->
+    <section id="formulas">
+        <div class="container">
+            <h2 class="section-title">Fórmulas Essenciais</h2>
+            <p class="section-subtitle">Referência rápida das fórmulas mais importantes</p>
+
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table table-modern">
+                            <thead>
+                                <tr>
+                                    <th width="30%">Categoria</th>
+                                    <th width="40%">Fórmula</th>
+                                    <th width="30%">Aplicação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Limites Fundamentais</strong></td>
+                                    <td>$\lim_{x \to 0} \frac{\sin x}{x} = 1$</td>
+                                    <td>Funções trigonométricas</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Número de Euler</strong></td>
+                                    <td>$\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$</td>
+                                    <td>Crescimento exponencial</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Regra da Potência</strong></td>
+                                    <td>$\frac{d}{dx}(x^n) = nx^{n-1}$</td>
+                                    <td>Derivação básica</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Regra do Produto</strong></td>
+                                    <td>$(fg)' = f'g + fg'$</td>
+                                    <td>Produto de funções</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Regra do Quociente</strong></td>
+                                    <td>$\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}$</td>
+                                    <td>Divisão de funções</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Regra da Cadeia</strong></td>
+                                    <td>$(f \circ g)' = f'(g(x)) \cdot g'(x)$</td>
+                                    <td>Composição de funções</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Derivada do Seno</strong></td>
+                                    <td>$\frac{d}{dx}(\sin x) = \cos x$</td>
+                                    <td>Funções trigonométricas</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Derivada do Cosseno</strong></td>
+                                    <td>$\frac{d}{dx}(\cos x) = -\sin x$</td>
+                                    <td>Funções trigonométricas</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Derivada Exponencial</strong></td>
+                                    <td>$\frac{d}{dx}(e^x) = e^x$</td>
+                                    <td>Crescimento exponencial</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Derivada Logarítmica</strong></td>
+                                    <td>$\frac{d}{dx}(\ln x) = \frac{1}{x}$</td>
+                                    <td>Funções logarítmicas</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Integral da Potência</strong></td>
+                                    <td>$\int x^n dx = \frac{x^{n+1}}{n+1} + C$ (n≠-1)</td>
+                                    <td>Integração básica</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Integral do Seno</strong></td>
+                                    <td>$\int \sin x dx = -\cos x + C$</td>
+                                    <td>Integração trigonométrica</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Integral do Cosseno</strong></td>
+                                    <td>$\int \cos x dx = \sin x + C$</td>
+                                    <td>Integração trigonométrica</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Integral Exponencial</strong></td>
+                                    <td>$\int e^x dx = e^x + C$</td>
+                                    <td>Integração exponencial</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Integral de 1/x</strong></td>
+                                    <td>$\int \frac{1}{x} dx = \ln|x| + C$</td>
+                                    <td>Integração logarítmica</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa mental -->
+    <section id="mapa-conceitos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Mapa de Conceitos</h2>
+
+            <div class="accordion" id="accordionMapa">
+                <!-- Cálculo Diferencial -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            Cálculo Diferencial
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                        data-bs-parent="#accordionMapa">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Limites:</strong> Conceito fundamental que define o comportamento de funções
+                                </li>
+                                <li><strong>Derivadas:</strong> Taxa de variação instantânea</li>
+                                <li><strong>Aplicações:</strong> Otimização, taxa de crescimento, análise de gráficos
+                                </li>
+                                <li><strong>Regras de Derivação:</strong> Produto, quociente, cadeia</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cálculo Integral -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            Cálculo Integral
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                        data-bs-parent="#accordionMapa">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Integral Indefinida:</strong> Antiderivada de uma função</li>
+                                <li><strong>Integral Definida:</strong> Área sob a curva em um intervalo</li>
+                                <li><strong>Teorema Fundamental:</strong> Relaciona derivação e integração</li>
+                                <li><strong>Métodos de Integração:</strong> Substituição, partes, frações parciais</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Funções -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            Tipos de Funções
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                        data-bs-parent="#accordionMapa">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Polinomiais:</strong> $f(x) = ax^n + bx^{n-1} + ... + c$</li>
+                                <li><strong>Exponenciais:</strong> $f(x) = a^x$</li>
+                                <li><strong>Logarítmicas:</strong> $f(x) = \log_a(x)$</li>
+                                <li><strong>Trigonométricas:</strong> $\sin(x)$, $\cos(x)$, $\tan(x)$</li>
+                                <li><strong>Racionais:</strong> $f(x) = \frac{P(x)}{Q(x)}$</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tópicos Avançados -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            Tópicos Avançados
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                        data-bs-parent="#accordionMapa">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Séries de Taylor:</strong> Aproximação de funções por polinômios</li>
+                                <li><strong>Equações Diferenciais:</strong> Relações entre funções e suas derivadas</li>
+                                <li><strong>Cálculo Multivariável:</strong> Funções de várias variáveis</li>
+                                <li><strong>Análise Vetorial:</strong> Campos vetoriais e integrais de linha</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Vídeos -->
+    <section id="videos" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Vídeos Educativos</h2>
+            <p class="section-subtitle">Aprenda cálculo com nossos vídeos explicativos cuidadosamente selecionados</p>
+
+            <div class="videos-intro fade-in-up">
+                <h3><i class="fas fa-play-circle me-2"></i>Conteúdo Audiovisual</h3>
+                <p>Explore conceitos fundamentais do cálculo através de explicações visuais e exemplos práticos. Cada
+                    vídeo foi escolhido para complementar seu aprendizado de forma didática e progressiva.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card fade-in-up">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/dNHAgYyCpTY" title="Introdução ao Cálculo"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <h5 class="text-center">Introdução ao Cálculo</h5>
+                        <div class="video-meta">
+                            <div class="video-level">
+                                <i class="fas fa-signal"></i>
+                                <span>Iniciante</span>
+                            </div>
+                            <div class="video-duration">15 min</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/0cVtB-Wq40Q" title="Limites e Continuidade"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <h5 class="text-center">Limites e Continuidade</h5>
+                        <div class="video-meta">
+                            <div class="video-level">
+                                <i class="fas fa-signal"></i>
+                                <span>Intermediário</span>
+                            </div>
+                            <div class="video-duration">22 min</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/vcysUOSL7lo" title="Derivadas - Regras Básicas"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <h5 class="text-center">Derivadas - Regras Básicas</h5>
+                        <div class="video-meta">
+                            <div class="video-level">
+                                <i class="fas fa-signal"></i>
+                                <span>Intermediário</span>
+                            </div>
+                            <div class="video-duration">18 min</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <div class="alert alert-info d-inline-block border-0"
+                    style="background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(102, 16, 242, 0.1)); border-radius: 12px;">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    <strong>Dica:</strong> Assista aos vídeos na ordem sugerida para um melhor aproveitamento do
+                    conteúdo!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Exercícios -->
+    <section id="exercicios" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Exercícios Resolvidos</h2>
+            <p class="section-subtitle">Pratique com exercícios detalhadamente explicados</p>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Exercício 1 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">1</div>
+                            <div>
+                                <h5 class="mb-1">Cálculo de Limites</h5>
+                                <span class="badge bg-primary">Nível: Básico</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Calcule: $\displaystyle \lim_{x \to 1} \frac{x^2 - 1}{x - 1}$</p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol1', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol1" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Observamos que temos uma indeterminação do tipo $\frac{0}{0}$</li>
+                                <li>Fatoramos o numerador: $x^2 - 1 = (x-1)(x+1)$</li>
+                                <li>Simplificamos: $\frac{x^2 - 1}{x - 1} = \frac{(x-1)(x+1)}{x-1} = x + 1$ (para $x
+                                    \neq 1$)</li>
+                                <li>Aplicamos o limite: $\lim_{x \to 1} (x + 1) = 1 + 1 = 2$</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> $\lim_{x \to 1} \frac{x^2 - 1}{x - 1} = 2$
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercício 2 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">2</div>
+                            <div>
+                                <h5 class="mb-1">Derivadas - Regra da Potência</h5>
+                                <span class="badge bg-success">Nível: Básico</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Calcule a derivada de $f(x) = 3x^4 - 2x^3 + 5x - 7$</p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol2', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol2" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Aplicamos a regra da potência termo a termo:</li>
+                                <li>$\frac{d}{dx}(3x^4) = 3 \cdot 4x^3 = 12x^3$</li>
+                                <li>$\frac{d}{dx}(-2x^3) = -2 \cdot 3x^2 = -6x^2$</li>
+                                <li>$\frac{d}{dx}(5x) = 5$</li>
+                                <li>$\frac{d}{dx}(-7) = 0$ (derivada de constante é zero)</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> $f'(x) = 12x^3 - 6x^2 + 5$
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercício 3 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">3</div>
+                            <div>
+                                <h5 class="mb-1">Continuidade</h5>
+                                <span class="badge bg-info">Nível: Básico</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Verifique se a função
+                            $$ f(x) = \begin{cases}
+                            x^2, & x \leq 2 \\
+                            4x - 4, & x > 2
+                            \end{cases} $$
+                            é contínua em $x=2$.
+                        </p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol3', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol3" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Para verificar continuidade em $x=2$, precisamos checar três condições:</li>
+                                <li>$f(2) = 2^2 = 4$ (função definida no ponto)</li>
+                                <li>Limite pela esquerda: $\lim_{x \to 2^-} f(x) = \lim_{x \to 2^-} x^2 = 4$</li>
+                                <li>Limite pela direita: $\lim_{x \to 2^+} f(x) = \lim_{x \to 2^+} (4x - 4) = 4 \times 2
+                                    - 4 = 4$</li>
+                                <li>Como $f(2) = \lim_{x \to 2^-} f(x) = \lim_{x \to 2^+} f(x) = 4$, todas as condições
+                                    são satisfeitas</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> A função é contínua em $x=2$
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercício 4 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">4</div>
+                            <div>
+                                <h5 class="mb-1">Derivada da Função Composta</h5>
+                                <span class="badge bg-warning">Nível: Intermediário</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Calcule a derivada de $f(x) = \sin(3x^2 + 1)$</p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol4', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol4" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Usamos a regra da cadeia: $(f(g(x)))' = f'(g(x)) \cdot g'(x)$</li>
+                                <li>Seja $g(x) = 3x^2 + 1$ e $h(u) = \sin u$, então $f(x) = h(g(x))$</li>
+                                <li>Derivada de $h(u)$: $h'(u) = \cos u$</li>
+                                <li>Derivada de $g(x)$: $g'(x) = 6x$</li>
+                                <li>Logo, $f'(x) = h'(g(x)) \cdot g'(x) = \cos(3x^2 + 1) \cdot 6x$</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> $f'(x) = 6x \cos(3x^2 + 1)$
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercício 5 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">5</div>
+                            <div>
+                                <h5 class="mb-1">Integral Indefinida</h5>
+                                <span class="badge bg-primary">Nível: Básico</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Calcule: $\int (2x^3 - 4x + 3) dx$</p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol5', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol5" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Aplicamos a regra da integração termo a termo:</li>
+                                <li>$\int 2x^3 dx = 2 \cdot \frac{x^4}{4} = \frac{x^4}{2}$</li>
+                                <li>$\int (-4x) dx = -4 \cdot \frac{x^2}{2} = -2x^2$</li>
+                                <li>$\int 3 dx = 3x$</li>
+                                <li>Somamos as integrais e adicionamos a constante de integração</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> $\int (2x^3 - 4x + 3) dx = \frac{x^4}{2} - 2x^2 + 3x + C$
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercício 6 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">6</div>
+                            <div>
+                                <h5 class="mb-1">Limite no Infinito</h5>
+                                <span class="badge bg-warning">Nível: Intermediário</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Calcule: $\displaystyle \lim_{x \to \infty} \frac{3x^2 - 2x + 1}{x^2 + 4x - 5}$
+                        </p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol6', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol6" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Dividimos numerador e denominador pelo maior grau do denominador: $x^2$</li>
+                                <li>$\frac{3x^2 - 2x + 1}{x^2 + 4x - 5} = \frac{\frac{3x^2}{x^2} - \frac{2x}{x^2} +
+                                    \frac{1}{x^2}}{\frac{x^2}{x^2} + \frac{4x}{x^2} - \frac{5}{x^2}}$</li>
+                                <li>Simplificamos: $\frac{3 - \frac{2}{x} + \frac{1}{x^2}}{1 + \frac{4}{x} -
+                                    \frac{5}{x^2}}$</li>
+                                <li>Quando $x \to \infty$, temos $\frac{1}{x} \to 0$ e $\frac{1}{x^2} \to 0$</li>
+                                <li>Portanto: $\lim_{x \to \infty} \frac{3 - 0 + 0}{1 + 0 - 0} = \frac{3}{1} = 3$</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> $\lim_{x \to \infty} \frac{3x^2 - 2x + 1}{x^2 + 4x - 5} = 3$
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercício 7 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">7</div>
+                            <div>
+                                <h5 class="mb-1">Derivada do Produto</h5>
+                                <span class="badge bg-warning">Nível: Intermediário</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Calcule a derivada de $f(x) = (2x + 3)(x^2 - 1)$</p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol7', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol7" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Aplicamos a regra do produto: $(uv)' = u'v + uv'$</li>
+                                <li>Sejam $u = 2x + 3$ e $v = x^2 - 1$</li>
+                                <li>Calculamos as derivadas: $u' = 2$ e $v' = 2x$</li>
+                                <li>Aplicamos a fórmula: $f'(x) = u'v + uv' = 2(x^2 - 1) + (2x + 3)(2x)$</li>
+                                <li>Simplificamos: $f'(x) = 2x^2 - 2 + 4x^2 + 6x = 6x^2 + 6x - 2$</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> $f'(x) = 6x^2 + 6x - 2$
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercício 8 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">8</div>
+                            <div>
+                                <h5 class="mb-1">Integral Definida</h5>
+                                <span class="badge bg-warning">Nível: Intermediário</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Calcule: $\int_0^2 (x^2 + 3x) dx$</p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol8', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol8" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Primeiro encontramos a primitiva: $\int (x^2 + 3x) dx = \frac{x^3}{3} +
+                                    \frac{3x^2}{2} + C$</li>
+                                <li>Aplicamos o Teorema Fundamental do Cálculo:</li>
+                                <li>$\int_0^2 (x^2 + 3x) dx = \left[\frac{x^3}{3} + \frac{3x^2}{2}\right]_0^2$</li>
+                                <li>Calculamos em $x = 2$: $\frac{2^3}{3} + \frac{3 \cdot 2^2}{2} = \frac{8}{3} +
+                                    \frac{12}{2} = \frac{8}{3} + 6 = \frac{8 + 18}{3} = \frac{26}{3}$</li>
+                                <li>Calculamos em $x = 0$: $\frac{0^3}{3} + \frac{3 \cdot 0^2}{2} = 0$</li>
+                                <li>Resultado: $\frac{26}{3} - 0 = \frac{26}{3}$</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> $\int_0^2 (x^2 + 3x) dx = \frac{26}{3}$
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercício 9 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">9</div>
+                            <div>
+                                <h5 class="mb-1">Máximos e Mínimos</h5>
+                                <span class="badge bg-danger">Nível: Avançado</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Encontre os pontos críticos da função $f(x) = x^3 - 3x^2 + 2$ e classifique-os
+                        </p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol9', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol9" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Calculamos a primeira derivada: $f'(x) = 3x^2 - 6x$</li>
+                                <li>Igualamos a zero: $3x^2 - 6x = 0$</li>
+                                <li>Fatoramos: $3x(x - 2) = 0$</li>
+                                <li>Pontos críticos: $x = 0$ e $x = 2$</li>
+                                <li>Calculamos a segunda derivada: $f''(x) = 6x - 6$</li>
+                                <li>Teste da segunda derivada:
+                                    <ul>
+                                        <li>$f''(0) = -6 < 0$ → máximo local em $x=0$</li>
+                                        <li>$f''(2) = 6 > 0$ → mínimo local em $x = 2$</li>
+                                    </ul>
+                                </li>
+                                <li>Valores da função: $f(0) = 2$ e $f(2) = -2$</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> Máximo local em $(0, 2)$ e mínimo local em $(2, -2)$
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercício 10 -->
+                    <div class="exercise-card">
+                        <div class="exercise-header">
+                            <div class="exercise-number">10</div>
+                            <div>
+                                <h5 class="mb-1">Integração por Substituição</h5>
+                                <span class="badge bg-danger">Nível: Avançado</span>
+                            </div>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-bar-custom" style="width: 0%"></div>
+                        </div>
+                        <p class="mb-3">Calcule: $\int 2x \cos(x^2) dx$</p>
+                        <button class="btn btn-primary-custom btn-custom" onclick="toggleSolution('sol10', this)">
+                            <i class="bi bi-lightbulb me-2"></i>Ver Solução
+                        </button>
+                        <div id="sol10" class="solution-panel" style="display: none;">
+                            <h6 class="fw-bold mb-2">Solução Passo a Passo:</h6>
+                            <ol>
+                                <li>Fazemos a substituição: $u = x^2$</li>
+                                <li>Calculamos $du$: $du = 2x dx$</li>
+                                <li>Observamos que $2x dx = du$</li>
+                                <li>Substituímos na integral: $\int 2x \cos(x^2) dx = \int \cos(u) du$</li>
+                                <li>Integramos: $\int \cos(u) du = \sin(u) + C$</li>
+                                <li>Voltamos à variável original: $\sin(u) + C = \sin(x^2) + C$</li>
+                            </ol>
+                            <div class="alert alert-success mt-3">
+                                <strong>Resposta:</strong> $\int 2x \cos(x^2) dx = \sin(x^2) + C$
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <footer id="sobre" class="footer-custom py-5 text-white">
+        <div class="container">
+            <h2 class="mb-4 text-center fw-bold"><i class="bi bi-lightbulb-fill me-2"></i>Sobre o Projeto</h2>
+            <p class="lead text-center mx-auto" style="max-width: 800px;">
+                Este site foi desenvolvido por <strong>Eduardo Euflausino</strong> e <strong>Guilherme Holanda</strong>
+                para facilitar o aprendizado de Cálculo, com conteúdo organizado, acessível e didático para estudantes e
+                entusiastas da matemática.
+            </p>
+
+            <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.2);">
+
+            <div class="text-center small opacity-75">
+                <i class="bi bi-c-circle"></i> 2025 - FATEC Carapicuiba. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS local -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Seu script -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
